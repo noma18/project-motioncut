@@ -1,3 +1,6 @@
+# This python code enables user to maintain their expenses on daily basis and provides an interface to get the insights from previously stored records
+
+
 import os
 import json
 import datetime
@@ -6,7 +9,7 @@ class ExpenseTracker:
     def __init__(self):
         self.expenses = self.load_expenses()
 
-    def load_expenses(self):
+    def load_expenses(self):        
         if os.path.exists('expenses.json'):
             with open('expenses.json', 'r') as f:
                 expenses = json.load(f)
@@ -18,11 +21,11 @@ class ExpenseTracker:
         else:
             return {}
 
-    def save_expenses(self):
+    def save_expenses(self):       #to save the enteries by user in expenses.json file
         with open('expenses.json', 'w') as f:
             json.dump(self.expenses, f)
 
-    def add_expense(self):
+    def add_expense(self):            # to add expenses entries by the user
         year = int(input("Enter year: "))
         month = int(input("Enter month: "))
         day = int(input("Enter day: "))
@@ -43,7 +46,7 @@ class ExpenseTracker:
 
         self.save_expenses()
 
-    def view_monthly_expenses(self):
+    def view_monthly_expenses(self):        # to view monthly expenses
         year = int(input("Enter year: "))
         month = int(input("Enter month: "))
 

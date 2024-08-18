@@ -3,7 +3,7 @@ import random
 # List of word categories
 categories = {
     "animals": ["cat", "dog", "elephant", "lion", "tiger", "bear", "monkey"],
-    "countries": ["usa", "canada", "mexico", "france", "germany", "italy", "spain"],
+    "countries": ["india","usa", "canada", "mexico", "france", "germany", "italy", "spain"],
     "movies": ["starwars", "avengers", "inception", "interstellar", "matrix", "joker", "parasite"]
 }
 
